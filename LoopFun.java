@@ -41,6 +41,17 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
-      }
+          String[] baseABC = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+          String[] newABC = {"d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","a","b","c"};
+          int i;
+          int j;
+          String wordNew = word;
+          
+              for(j=0;j<26;j++){
+                 wordNew.replace(baseABC[j],newABC[j]);
+                }
+                
+        return wordNew;
+    }
+    
 }
