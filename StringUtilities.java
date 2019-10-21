@@ -45,7 +45,7 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        return value.replace(charToRemove.toString(),"");
     }
 
     /**
@@ -53,6 +53,7 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        int wordStart = sentence.lastIndexOf(" ")+1;
+        return sentence.substring(wordStart,sentence.length());
     }
 }
